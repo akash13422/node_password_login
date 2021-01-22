@@ -1,0 +1,270 @@
+Q 1 - Which of the following is correct about JavaScript?
+
+A - JavaScript is a lightweight, interpreted programming language.
+B - JavaScript has object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.
+C - The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.
+D - All of the above.
+ans:D
+
+
+Q 2 - Which of the following function of String object combines the text of two strings and returns a new string?
+
+A - add()
+B - merge()
+C - concat()
+D - append()
+Answer : C
+Explanation
+concat() − Combines the text of two strings and returns a new string.
+
+
+Q 3 - Which of the following function of String object is used to find a match between a regular expression and a string, and to replace the matched substring with a new substring?
+
+A - concat()
+B - match()
+C - replace()
+D - search()
+
+Answer : C
+Explanation
+replace() − Used to find a match between a regular expression and a string, and to replace the matched substring with a new substring.
+
+
+
+Q 4 - Which of the following function of Array object removes the last element from an array and returns that element?
+
+A - pop()
+B - push()
+C - join()
+D - map()
+Answer : A
+Explanation
+pop() − Removes the last element from an array and returns that element.
+
+
+Q 5 - Which of the following function of Array object extracts a section of an array and returns a new array?
+
+A - reverse()
+B - shift()
+C - slice()
+D - some()
+Answer : C
+Explanation
+slice() − Extracts a section of an array and returns a new array.
+
+
+Q 6- Which of the following function of Array object creates a new array with all of the elements of this array for which the provided filtering function returns true?
+
+A - concat()
+B - every()
+C - filter()
+D - some()
+Answer : C
+Explanation
+filter() − Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+
+
+Q 7- Which of the following function of String object returns the characters in a string beginning at the specified location through the specified number of characters?
+
+A - slice()
+B - split()
+C - substr()
+D - search()
+Answer : C
+Explanation
+substr() − Returns the characters in a string beginning at the specified location through the specified number of characters.
+
+
+Q 8- Which built-in method calls a function for each element in the array?
+
+A - while()
+B - loop()
+C - forEach()
+D - None of the above.
+Answer : C
+Explanation
+forEach() method calls a function for each element in the array.
+
+
+Q 9- Which of the following is correct about callbacks?
+
+A - A callback is a plain JavaScript function passed to some method as an argument or option.
+B - Some callbacks are just events, called to give the user a chance to react when a certain state is triggered.
+C - Both of the above.
+D - None of the above.
+Answer : C
+Explanation
+A callback is a plain JavaScript function passed to some method as an argument or option. Some callbacks are just events, called to give the user a chance to react when a certain state is triggered.
+
+Q 10 - What will be the output of the code?
+
+function Add(){
+    console.log(answer)
+    var answer = 2
+};
+Add();
+
+
+A) 2
+B) 4
+C) undefined
+D) Error
+
+Ans:The above code displays undefined as an answer due to the concept of hoisting in Javascript.
+In JavaScript, a variable can be declared after it has been used. This is because variable declarations using var are hoisted to the top of their functional scope at compile time. Hence, a variable can be initialized and used before it has been declared.
+
+Q 11 - What will be the output of the code?
+let dog = {
+    breed: "Border Collie",
+    sound: "Wooh",
+    getBreed: () => { 
+        return this.breed;
+    },
+    getSound: function() {
+        return this.sound;
+    }
+};
+console.log(dog.getBreed(), dog.getSound());
+
+A) Border Collie, Wooh
+B) Border Collie, undefined
+c) undefined, Wooh 
+D) undefined, undefined
+CORRECT ANSWER C
+The this inside an arrow function does not depend on how the function was called. Instead, they inherit the this of the parent scope. This is called "lexical scoping". In sloppy mode, this on the top level refers to the global object, so getBreed's this.breed refers to the breed property on the global object, which doesn't exist.
+
+Q 11 - What will be the output of the code?
+function fun(...input){ 
+    let sum = 0; 
+    for(let i of input){ 
+        sum+=i; 
+    } 
+    return sum; 
+} 
+fun(1,2,3,4,5); 
+
+ANS: 15  
+
+
+Q 12 - How to write an IF statement for executing some code if "i" is NOT equal to 5?
+A) if(i!=5)
+B) if(i<>5)
+C) if !=5 then
+D) if i<>5
+
+ANS : A
+
+
+Q 12 - Predict the output of the following JavaScript code?
+<script type="text/javascript"> 
+a = 8 + "8"; 
+document.write(a); 
+</script> 
+
+A) 16
+B) Compilation Error
+C) 88
+D) Run Time Error
+
+Ans: Option C
+Explanation: In the above given code, 8+”8″ have first integer and second string data types. Rather than adding the two numbers, it concatenated the two.
+
+
+
+Q 13 - Predict the output of the following JavaScript code.
+<script type="text/javascript" language="javascript"> 
+var x=5; 
+var y=6; 
+var res=eval("x*y"); 
+document.write(res); 
+</script> 
+
+A. “30”
+B. 30
+C. 5*6
+D. “5*6”
+
+Ans: B
+Explanation: eval command will evaluate the operation. Here it is 5*6=30.
+
+
+Q 14 - Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?
+
+A - charAt()
+B - charCodeAt()
+C - concat()
+D - indexOf()
+
+Ans:B
+
+
+Q.15 If the value of x is 40, then what is the output of the following program?
+(x % 10 == 0)? console.log("Division by 10") : console.log("Not divisible by 10");
+
+ReferenceError
+Divisible by 10
+Not divisible by 10
+None of the above
+
+ANS: B
+
+
+Q 16 - Predict the output of the following JavaScript code?
+function job() {
+    return new Promise(function(resolve, reject) {
+        reject();
+    });
+}
+
+let promise = job();
+
+promise
+.then(function() {
+    console.log('Success 1');
+})
+
+.then(function() {
+    console.log('Success 2');
+})
+
+.then(function() {
+    console.log('Success 3');
+})
+
+.catch(function() {
+    console.log('Error 1');
+})
+
+.then(function() {
+    console.log('Success 4');
+});
+
+
+
+Q 17- 3. A promise may be in one of the following states:(choose all that apply)
+
+A) Pending state
+B) Resolved state
+C) Rejected state
+D) Controlled state
+
+
+ANS: a,b,c 
+
+
+Q 18- Difference between “==” and “===” ?
+ans:
+” ==” only compares values “===” compare values and type both.
+
+
+Q 19- Difference between “undefine” and “NULL” Keywords?
+ans:
+When you define a var but not assign any value. typeof(undefine)=> undefine
+Null- manually done. typeof(null)=> object
+
+
+Q 20- Is javascript case-sensitive?
+Ans:
+Yes, JavaScript is a case-sensitive language. This means that language keywords, variables, function names, and any other identifiers must always be typed with a consistent capitalization of letters.
+
+
